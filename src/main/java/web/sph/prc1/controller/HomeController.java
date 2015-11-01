@@ -11,7 +11,17 @@ import web.sph.prc1.entity.User;
  * Created by Paradox on 28/10/2015.
  */
 @Controller
+@RequestMapping(value = "/", method = RequestMethod.GET)
 public class HomeController {
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView getEntryPointGeneral(Model model){
+        ModelAndView mvn = new ModelAndView();
+        mvn.addObject("message", "Hello World from general Mapping");
+        mvn.setViewName("entrypoint");
+
+        return mvn;
+    }
 
     @RequestMapping(value = "/SpringWeb1", method = RequestMethod.GET)
     public ModelAndView getEntryPointView(Model model){

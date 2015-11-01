@@ -18,6 +18,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/SpringWeb1", "/SpringWeb2", "/Registration", "/result"};
+        //return new String[]{"/SpringWeb1", "/SpringWeb2", "/Registration", "/result"};
+        return new String[]{"/"};
     }
 }
