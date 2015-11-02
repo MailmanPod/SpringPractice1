@@ -45,7 +45,6 @@ public class HomeController {
     public ModelAndView getUserForm(Model model){
         ModelAndView mvn = new ModelAndView("userForm", "user", new User());
         mvn.addObject("title", "User Registration Form");
-        mvn.setViewName("userForm");
 
         return mvn;
     }
