@@ -1,5 +1,6 @@
 package web.sph.prc1.entity;
 
+import com.sun.istack.internal.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -9,9 +10,13 @@ import java.util.Date;
  */
 public class User {
 
+    @NotNull
     private String name;
+
+    @NotNull
     private String password;
 
+    @NotNull
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date birthdate;
 

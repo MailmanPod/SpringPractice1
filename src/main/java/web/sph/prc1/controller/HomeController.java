@@ -2,6 +2,7 @@ package web.sph.prc1.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,7 +15,7 @@ import web.sph.prc1.entity.User;
 @RequestMapping(value = "/", method = RequestMethod.GET)
 public class HomeController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView getEntryPointGeneral(Model model){
         ModelAndView mvn = new ModelAndView();
         mvn.addObject("message", "Hello World from general Mapping");
